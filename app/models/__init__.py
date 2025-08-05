@@ -1,2 +1,2 @@
-# AI dev note: Modelos SQLAlchemy da aplicação
-# Todos os modelos devem ser importados aqui para garantir que sejam registrados 
+# AI dev note: Modelos da aplicação
+# Nota: Esta aplicação usa Supabase como banco de dados, não SQLAlchemy 

@@ -5,11 +5,6 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api.v1.api import api_router
 from app.config import settings
-from app.database import engine
-from app.models import user  # Importar modelos para criar tabelas
-
-# AI dev note: Criar tabelas no banco de dados
-user.Base.metadata.create_all(bind=engine)
 
 # AI dev note: Configurar aplicação FastAPI
 app = FastAPI(
