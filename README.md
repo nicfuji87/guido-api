@@ -1,6 +1,6 @@
-# Guido API - API de Integração
+# Guido API - Sistema Completo para Gestão de Corretores Imobiliários
 
-Uma API de integração moderna construída com FastAPI e Python.
+Uma API moderna e completa construída com FastAPI e Python para gestão de corretores imobiliários com integração de IA.
 
 ## 🚀 Características
 
@@ -12,6 +12,7 @@ Uma API de integração moderna construída com FastAPI e Python.
 - **Alembic**: Migrações de banco de dados
 - **Pytest**: Testes automatizados
 - **pgvector**: Busca vetorial para IA
+- **httpx**: Cliente HTTP assíncrono para integração com Supabase
 
 ## 📋 Pré-requisitos
 
@@ -23,7 +24,7 @@ Uma API de integração moderna construída com FastAPI e Python.
 
 1. Clone o repositório:
 ```bash
-git clone <seu-repositorio>
+git clone https://github.com/nicfuji87/guido-api.git
 cd guido-api
 ```
 
@@ -115,6 +116,31 @@ SECRET_KEY=your-secret-key-here
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 ```
 
+## 🎯 Endpoints Disponíveis
+
+### Saúde da API
+- `GET /api/v1/health` - Status da aplicação
+
+### Entidades Principais
+- `GET /api/v1/guido/contas` - Listar todas as contas
+- `GET /api/v1/guido/planos` - Listar planos ativos
+- `POST /api/v1/guido/{entity}` - Criar nova entidade
+- `PUT /api/v1/guido/{entity}/{id}` - Atualizar entidade
+- `DELETE /api/v1/guido/{entity}/{id}` - Deletar entidade
+
+### Entidades Suportadas
+- **contas**: Gestão de contas de corretores
+- **corretores**: Usuários do sistema
+- **clientes**: Leads e clientes
+- **conversas**: Conversas com clientes
+- **mensagens**: Mensagens das conversas
+- **lembretes**: Lembretes para corretores
+- **dossies-ia**: Dossiês de IA por cliente
+- **assinaturas**: Assinaturas dos planos
+- **faturas**: Histórico de cobranças
+- **conexoes-externas**: Integrações com CRMs
+- **planos**: Catálogo de planos
+
 ## 🤝 Contribuindo
 
 1. Fork o projeto
@@ -125,4 +151,4 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes. 
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
